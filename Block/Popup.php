@@ -36,4 +36,10 @@ class Popup extends \Magento\Framework\View\Element\Template {
 			$this->storeManager->getStore()->getId()
 		);
 	}
+	public function isActive(){
+		return (bool)$this->helper->getConfigValue(
+			'general/active',
+			$this->storeManager->getStore()->getId()
+		);
+	}
 }

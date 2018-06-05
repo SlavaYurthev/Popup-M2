@@ -1,14 +1,23 @@
-<div style="display:none" data-mage-init='{
-	"SY_Popup/js/popup":{
-		"lifetime": <?php echo $this->getLifetime(); ?>,
-		"options": {
-			"type": "popup",
-			"responsive": true,
-			"innerScroll": true,
-			"title": "",
-			"buttons": []
+<?php
+/**
+ * Popup
+ * 
+ * @author Slava Yurthev
+ */
+?>
+<?php if($this->isActive()): ?>
+	<div style="display:none" data-mage-init='{
+		"SY_Popup/js/popup":{
+			"lifetime": <?php echo $this->getLifetime(); ?>,
+			"options": {
+				"type": "popup",
+				"responsive": true,
+				"innerScroll": true,
+				"title": "",
+				"buttons": []
+			}
 		}
-	}
-}'>
-	<?php echo $this->getContent(); ?>
-</div>
+	}'>
+		<?php echo $this->getContent(); ?>
+	</div>
+<?php endif; ?>
